@@ -1,5 +1,11 @@
 // Task 1: Create a function that randomly chooses among 'rock', 'paper', or 'scissors'.
-var generateComputerChoice = function () {
+ 
+var generateComputerChoice = function ()  {
+    var hands = ["rock", "paper", "scissors"]
+    var getRandomInt = Math.floor(Math.random() * (3))
+    var fingers = hands [getRandomInt]
+        return fingers
+       
     // Task 1, Step 1: Create an array with three elements ("rock", "paper" and "scissors").
         
     // Task 1, Step 2: Use the JavaScript Math function to generate a random whole
@@ -17,6 +23,18 @@ var generateComputerChoice = function () {
 var pickWinner = function (userChoice, computerChoice) {
     console.log("user choice: " + userChoice);
     console.log("computer choice: " + computerChoice);
+     if (0 === 0) {
+         console.log("It's a tie")
+} else if (0 === 1) {
+    console.log("")
+} else if(0 === 2) {
+    console.log("Rock wins")
+} else if (1 === 1)
+    console.log("It's a Tie")
+} else if (1 === 2) {
+    console.log("Scissor wins!")
+}else if (2 === 2)
+  console.log("It's a Tie")
     // Task 2, Step 1: Create an "if/else if/else" statement that compares the
     // userChoice and computerChoice under any possible game outcome.
        
