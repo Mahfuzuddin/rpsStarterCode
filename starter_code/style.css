@@ -4,9 +4,11 @@
 }
 
 .choice {
-    border: 1px solid;
+    border: 5px solid;
     display: inline-block;
     width: 100px;
     text-align: center;
     padding: 20px;
+    color: Blue;
+    
 }

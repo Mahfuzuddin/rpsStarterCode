@@ -21,20 +21,27 @@ var generateComputerChoice = function ()  {
 // Task 2: Create a function that compares the userChoice and the computerChoice
 // to decide who won.
 var pickWinner = function (userChoice, computerChoice) {
+    
+
     console.log("user choice: " + userChoice);
     console.log("computer choice: " + computerChoice);
-     if (0 === 0) {
-         console.log("It's a tie")
-} else if (0 === 1) {
-    console.log("")
-} else if(0 === 2) {
-    console.log("Rock wins")
-} else if (1 === 1)
-    console.log("It's a Tie")
-} else if (1 === 2) {
-    console.log("Scissor wins!")
-}else if (2 === 2)
-  console.log("It's a Tie")
+    
+    if (userChoice == computerChoice ) {
+          return "It's a tie"
+    } else if (userChoice === "rock" && computerChoice === "paper") {
+       return "Computer Wins"
+    } else if (userChoice === 'rock' && computerChoice ==='scissors') {
+          return "User Wins"
+    } else if (userChoice === 'scissors' &&  computerChoice === 'paper') {
+          return "Computer Wins"
+    } else if (userChoice === 'scissors' && computerChoice === 'rock' ) {
+          return "Computer Wins"
+    } else if (userChoice === 'paper' && computerChoice === 'rock') {
+          return "User wins"
+    } else if (userChoice === 'paper' && computerChoice === 'scissors') {
+          return 'Computer Wins'
+    }
+    
     // Task 2, Step 1: Create an "if/else if/else" statement that compares the
     // userChoice and computerChoice under any possible game outcome.
        
@@ -49,21 +56,33 @@ var pickWinner = function (userChoice, computerChoice) {
 /* DOCUMENT READY: Everything inside this function will happen after
    the user's browser has finished loading the webpage. */
 $(document).ready(function() {
-
+    var userChoice;
+    var computerChoice;
+    
+    $(".choice").click(function() {
+        userChoice = $(this).text();
+        computerChoice = generateComputerChoice();
+         $('#computer-choice').text(computerChoice);
+    $('#winner').text(pickWinner(userChoice, computerChoice));
+    $().hide
+    
+    });
+    
+    
     // This line calls the `generateComputerChoice` function and assigns its
     // return value to the variable `computerChoice`.
-    var computerChoice = generateComputerChoice();
+    
 
     // This line sets `userChoice` variable to 'rock'. This value can be changed
     // manually when testing in the console.
-    var userChoice = "rock";
+
     // Task 3: To be completed AFTER this game functions in the console.
     // Set `userChoice` to "null" and create click handlers that changes the
     // value of userChoice based on the item the user clicks on the HTML page.
 
     // This line calls the `pickWinner` function with the `userChoice` variable
     // and the `computerChoice` variable.
-    pickWinner(userChoice, computerChoice);
+    
     //Final Task: comment out the pickWinner function on the line above and place it within your click functions created in Task 3.
     //this is done so the computer does not pick its throw until the user has also done so.
     
